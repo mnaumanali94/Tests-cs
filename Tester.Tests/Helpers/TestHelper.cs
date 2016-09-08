@@ -1,7 +1,7 @@
 /*
  * Tester.Tests
  *
- * This file was automatically generated for Stamplay by APIMATIC v2.0 ( https://apimatic.io ) on 08/01/2016
+ * This file was automatically generated for Stamplay by APIMATIC v2.0 ( https://apimatic.io ) on 09/08/2016
  */
 using System;
 using System.Collections;
@@ -275,8 +275,8 @@ namespace Tester.Tests.Helpers
         public static bool AreHeadersProperSubsetOf(
             Dictionary<string, string> leftDict, Dictionary<string, string> rightDict)
         {
-            Dictionary<string, string> leftDictInv = new Dictionary<string, string>(leftDict, StringComparer.InvariantCultureIgnoreCase);
-            Dictionary<string, string> rightDictInv = new Dictionary<string, string>(rightDict, StringComparer.InvariantCultureIgnoreCase);
+            Dictionary<string, string> leftDictInv = new Dictionary<string, string>(leftDict, StringComparer.CurrentCultureIgnoreCase);
+            Dictionary<string, string> rightDictInv = new Dictionary<string, string>(rightDict, StringComparer.CurrentCultureIgnoreCase);
             foreach (var leftKey in leftDictInv.Keys)
             {
                 if (!leftDictInv.ContainsKey(leftKey))

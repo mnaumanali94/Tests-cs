@@ -1,12 +1,13 @@
 /*
  * Tester.PCL
  *
- * This file was automatically generated for Stamplay by APIMATIC v2.0 ( https://apimatic.io ) on 08/01/2016
+ * This file was automatically generated for Stamplay by APIMATIC v2.0 ( https://apimatic.io ) on 09/08/2016
  */
 using System;
 using Tester.PCL;
 using Tester.PCL.Http.Client;
 using Tester.PCL.Http.Response;
+using Tester.PCL.Exceptions;
 
 namespace Tester.PCL.Controllers
 {
@@ -53,7 +54,7 @@ namespace Tester.PCL.Controllers
                 throw new APIException(@"400 Global", _context);
 
             else if (_response.StatusCode == 500)
-                throw new APIException(@"500 Global", _context);
+                throw new GlobalTestException(@"500 Global", _context);
 
             else if ((_response.StatusCode < 200) || (_response.StatusCode > 206)) //[200,206] = HTTP OK
                 throw new APIException(@"HTTP Response Not OK", _context);

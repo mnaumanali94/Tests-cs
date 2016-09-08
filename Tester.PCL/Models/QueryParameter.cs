@@ -16,61 +16,25 @@ using Tester.PCL;
 
 namespace Tester.PCL.Models
 {
-    public class ServerResponse : INotifyPropertyChanged 
+    public class QueryParameter : INotifyPropertyChanged 
     {
         // These fields hold the values for the public properties.
-        private bool passed;
-        private object input;
-        private string message;
+        private string key;
 
         /// <summary>
         /// TODO: Write general description for this method
         /// </summary>
-        [JsonProperty("passed")]
-        public bool Passed 
+        [JsonProperty("key")]
+        public string Key 
         { 
             get 
             {
-                return this.passed; 
+                return this.key; 
             } 
             set 
             {
-                this.passed = value;
-                onPropertyChanged("Passed");
-            }
-        }
-
-        /// <summary>
-        /// TODO: Write general description for this method
-        /// </summary>
-        [JsonProperty("input")]
-        public object Input 
-        { 
-            get 
-            {
-                return this.input; 
-            } 
-            set 
-            {
-                this.input = value;
-                onPropertyChanged("Input");
-            }
-        }
-
-        /// <summary>
-        /// TODO: Write general description for this method
-        /// </summary>
-        [JsonProperty("Message")]
-        public string Message 
-        { 
-            get 
-            {
-                return this.message; 
-            } 
-            set 
-            {
-                this.message = value;
-                onPropertyChanged("Message");
+                this.key = value;
+                onPropertyChanged("Key");
             }
         }
 

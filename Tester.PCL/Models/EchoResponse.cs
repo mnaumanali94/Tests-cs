@@ -1,7 +1,7 @@
 /*
  * Tester.PCL
  *
- * This file was automatically generated for Stamplay by APIMATIC v2.0 ( https://apimatic.io ) on 08/01/2016
+ * This file was automatically generated for Stamplay by APIMATIC v2.0 ( https://apimatic.io ) on 09/08/2016
  */
 using System;
 using System.IO;
@@ -12,7 +12,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-
 using Tester.PCL;
 
 namespace Tester.PCL.Models
@@ -24,8 +23,8 @@ namespace Tester.PCL.Models
         private Dictionary<string, string> headers;
         private string method;
         private string path;
-        private Dictionary<string, string> query;
-        private int uploadCount;
+        private Dictionary<string, QueryParameter> query;
+        private int? uploadCount;
 
         /// <summary>
         /// TODO: Write general description for this method
@@ -99,7 +98,7 @@ namespace Tester.PCL.Models
         /// TODO: Write general description for this method
         /// </summary>
         [JsonProperty("query")]
-        public Dictionary<string, string> Query 
+        public Dictionary<string, QueryParameter> Query 
         { 
             get 
             {
@@ -116,7 +115,7 @@ namespace Tester.PCL.Models
         /// TODO: Write general description for this method
         /// </summary>
         [JsonProperty("uploadCount")]
-        public int UploadCount 
+        public int? UploadCount 
         { 
             get 
             {

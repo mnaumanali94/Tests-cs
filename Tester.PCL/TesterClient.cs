@@ -1,7 +1,7 @@
 /*
  * Tester.PCL
  *
- * This file was automatically generated for Stamplay by APIMATIC v2.0 ( https://apimatic.io ) on 08/01/2016
+ * This file was automatically generated for Stamplay by APIMATIC v2.0 ( https://apimatic.io ) on 09/08/2016
  */
 using System;
 using Tester.PCL.Controllers;
@@ -19,7 +19,7 @@ namespace Tester.PCL
         {
             get
             {
-                return ResponseTypesController.Instance;
+                return Tester.PCL.Controllers.ResponseTypesController.Instance;
             }
         }
 
@@ -30,7 +30,7 @@ namespace Tester.PCL
         {
             get
             {
-                return ErrorCodesController.Instance;
+                return Tester.PCL.Controllers.ErrorCodesController.Instance;
             }
         }
 
@@ -41,7 +41,7 @@ namespace Tester.PCL
         {
             get
             {
-                return BodyParamsController.Instance;
+                return Tester.PCL.Controllers.BodyParamsController.Instance;
             }
         }
 
@@ -52,7 +52,7 @@ namespace Tester.PCL
         {
             get
             {
-                return FormParamsController.Instance;
+                return Tester.PCL.Controllers.FormParamsController.Instance;
             }
         }
 
@@ -63,7 +63,7 @@ namespace Tester.PCL
         {
             get
             {
-                return EchoController.Instance;
+                return Tester.PCL.Controllers.EchoController.Instance;
             }
         }
 
@@ -74,7 +74,7 @@ namespace Tester.PCL
         {
             get
             {
-                return HeaderController.Instance;
+                return Tester.PCL.Controllers.HeaderController.Instance;
             }
         }
 
@@ -85,7 +85,7 @@ namespace Tester.PCL
         {
             get
             {
-                return QueryParamController.Instance;
+                return Tester.PCL.Controllers.QueryParamController.Instance;
             }
         }
 
@@ -96,7 +96,7 @@ namespace Tester.PCL
         {
             get
             {
-                return TemplateParamsController.Instance;
+                return Tester.PCL.Controllers.TemplateParamsController.Instance;
             }
         }
 

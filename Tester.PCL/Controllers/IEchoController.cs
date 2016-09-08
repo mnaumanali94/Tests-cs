@@ -1,7 +1,7 @@
 /*
  * Tester.PCL
  *
- * This file was automatically generated for Stamplay by APIMATIC v2.0 ( https://apimatic.io ) on 08/01/2016
+ * This file was automatically generated for Stamplay by APIMATIC v2.0 ( https://apimatic.io ) on 09/08/2016
  */
 using System;
 using System.Collections.Generic;
@@ -52,15 +52,15 @@ namespace Tester.PCL.Controllers
         /// TODO: type endpoint description here
         /// </summary>
         /// <param name="queryParameters">Additional optional query parameters are supported by this endpoint</param>
-        /// <return>Returns the ServerResponse response from the API call</return>
-        ServerResponse QueryEcho(Dictionary<string, object> queryParameters = null);
+        /// <return>Returns the EchoResponse response from the API call</return>
+        EchoResponse QueryEcho(Dictionary<string, object> queryParameters = null);
 
         /// <summary>
         /// TODO: type endpoint description here
         /// </summary>
         /// <param name="queryParameters">Additional optional query parameters are supported by this endpoint</param>
-        /// <return>Returns the ServerResponse response from the API call</return>
-        Task<ServerResponse> QueryEchoAsync(Dictionary<string, object> queryParameters = null);
+        /// <return>Returns the EchoResponse response from the API call</return>
+        Task<EchoResponse> QueryEchoAsync(Dictionary<string, object> queryParameters = null);
 
     }
 } 

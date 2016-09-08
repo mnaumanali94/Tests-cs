@@ -1,7 +1,7 @@
 /*
  * Tester.Tests
  *
- * This file was automatically generated for Stamplay by APIMATIC v2.0 ( https://apimatic.io ) on 08/01/2016
+ * This file was automatically generated for Stamplay by APIMATIC v2.0 ( https://apimatic.io ) on 09/08/2016
  */
 using System;
 using System.Collections.Generic;
@@ -13,6 +13,8 @@ using Tester.PCL;
 using Tester.PCL.Controllers;
  
 using Tester.PCL.Models;
+ 
+using Tester.PCL.Exceptions;
 using Tester.PCL.Http.Client;
 using Tester.Tests.Helpers;
 
@@ -95,39 +97,6 @@ namespace Tester.Tests
 
             Assert.IsTrue(TestHelper.IsJsonObjectProperSubsetOf(
                     "{\"body\":{\"input\":{\"uid\":\"1123213\",\"name\":\"Shahid\"}}}", 
-                    TestHelper.ConvertStreamToString(httpCallBackHandler.Response.RawBody), 
-                    true, true, false),
-                    "Response body should have matching keys");
-        }
-
-        /// <summary>
-        /// TODO: Add description for test TestQueryEcho
-        /// </summary>
-        [Test]
-        public async Task TestQueryEcho() 
-        {
-            // key-value map for optional query parameters
-            Dictionary<string, object> queryParams = new Dictionary<string, object>();
-            queryParams.Add("hello", "world");
-
-            // Perform API call
-            ServerResponse result = null;
-
-            try
-            {
-                result = await controller.QueryEchoAsync(queryParams);
-            }
-            catch(APIException) {};
-
-            // Test response code
-            Assert.AreEqual(200, httpCallBackHandler.Response.StatusCode,
-                    "Status should be 200");
-
-            // Test whether the captured response is as we expected
-            Assert.IsNotNull(result, "Result should exist");
-
-            Assert.IsTrue(TestHelper.IsJsonObjectProperSubsetOf(
-                    "{\"query\":{\"hello\":\"world\"}}", 
                     TestHelper.ConvertStreamToString(httpCallBackHandler.Response.RawBody), 
                     true, true, false),
                     "Response body should have matching keys");

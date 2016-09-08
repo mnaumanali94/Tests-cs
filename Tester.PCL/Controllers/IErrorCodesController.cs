@@ -1,7 +1,7 @@
 /*
  * Tester.PCL
  *
- * This file was automatically generated for Stamplay by APIMATIC v2.0 ( https://apimatic.io ) on 08/01/2016
+ * This file was automatically generated for Stamplay by APIMATIC v2.0 ( https://apimatic.io ) on 09/08/2016
  */
 using System;
 using System.Collections.Generic;
@@ -43,6 +43,18 @@ namespace Tester.PCL.Controllers
         /// </summary>
         /// <return>Returns the dynamic response from the API call</return>
         Task<dynamic> Get500Async();
+
+        /// <summary>
+        /// TODO: type endpoint description here
+        /// </summary>
+        /// <return>Returns the dynamic response from the API call</return>
+        dynamic Get401();
+
+        /// <summary>
+        /// TODO: type endpoint description here
+        /// </summary>
+        /// <return>Returns the dynamic response from the API call</return>
+        Task<dynamic> Get401Async();
 
     }
 } 

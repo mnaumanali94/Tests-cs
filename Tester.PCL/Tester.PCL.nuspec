@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 Tester.PCL
-This file was automatically generated for Stamplay by APIMATIC v2.0 ( https://apimatic.io ) on 08/01/2016
+This file was automatically generated for Stamplay by APIMATIC v2.0 ( https://apimatic.io ) on 09/08/2016
 -->
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
@@ -19,7 +19,7 @@ features</description>
     <copyright>Copyright 2016</copyright>
     <language>en-US</language>
         <dependencies>
-            <dependency id="Unirest-APIMATIC" version="1.0.1.23" />
+            <dependency id="Unirest-APIMATIC" version="1.0.1.26" />
         </dependencies>
   </metadata>
   <files>

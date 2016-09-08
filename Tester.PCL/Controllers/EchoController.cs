@@ -1,7 +1,7 @@
 /*
  * Tester.PCL
  *
- * This file was automatically generated for Stamplay by APIMATIC v2.0 ( https://apimatic.io ) on 08/01/2016
+ * This file was automatically generated for Stamplay by APIMATIC v2.0 ( https://apimatic.io ) on 09/08/2016
  */
 using System;
 using System.Collections.Generic;
@@ -15,6 +15,7 @@ using Tester.PCL;
 using Tester.PCL.Http.Request;
 using Tester.PCL.Http.Response;
 using Tester.PCL.Http.Client;
+using Tester.PCL.Exceptions;
 using Tester.PCL.Models;
 
 namespace Tester.PCL.Controllers
@@ -189,10 +190,10 @@ namespace Tester.PCL.Controllers
         /// TODO: type endpoint description here
         /// </summary>
         /// <param name="queryParameters">Additional optional query parameters are supported by this endpoint</param>
-        /// <return>Returns the ServerResponse response from the API call</return>
-        public ServerResponse QueryEcho(Dictionary<string, object> queryParameters = null)
+        /// <return>Returns the EchoResponse response from the API call</return>
+        public EchoResponse QueryEcho(Dictionary<string, object> queryParameters = null)
         {
-            Task<ServerResponse> t = QueryEchoAsync(queryParameters);
+            Task<EchoResponse> t = QueryEchoAsync(queryParameters);
             Task.WaitAll(t);
             return t.Result;
         }
@@ -201,8 +202,8 @@ namespace Tester.PCL.Controllers
         /// TODO: type endpoint description here
         /// </summary>
         /// <param name="queryParameters">Additional optional query parameters are supported by this endpoint</param>
-        /// <return>Returns the ServerResponse response from the API call</return>
-        public async Task<ServerResponse> QueryEchoAsync(Dictionary<string, object> queryParameters = null)
+        /// <return>Returns the EchoResponse response from the API call</return>
+        public async Task<EchoResponse> QueryEchoAsync(Dictionary<string, object> queryParameters = null)
         {
             //the base uri for api requestss
             string _baseUri = Configuration.BaseUri;
@@ -241,7 +242,7 @@ namespace Tester.PCL.Controllers
 
             try
             {
-                return APIHelper.JsonDeserialize<ServerResponse>(_response.Body);
+                return APIHelper.JsonDeserialize<EchoResponse>(_response.Body);
             }
             catch (Exception _ex)
             {

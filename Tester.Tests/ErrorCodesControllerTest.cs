@@ -1,7 +1,7 @@
 /*
  * Tester.Tests
  *
- * This file was automatically generated for Stamplay by APIMATIC v2.0 ( https://apimatic.io ) on 08/01/2016
+ * This file was automatically generated for Stamplay by APIMATIC v2.0 ( https://apimatic.io ) on 09/08/2016
  */
 using System;
 using System.Collections.Generic;
@@ -13,6 +13,8 @@ using Tester.PCL;
 using Tester.PCL.Controllers;
  
 using Tester.PCL.Models;
+ 
+using Tester.PCL.Exceptions;
 using Tester.PCL.Http.Client;
 using Tester.Tests.Helpers;
 
@@ -72,11 +74,33 @@ namespace Tester.Tests
             {
                 result = await controller.Get500Async();
             }
-            catch(APIException) {};
+            catch(GlobalTestException) {};
 
             // Test response code
             Assert.AreEqual(500, httpCallBackHandler.Response.StatusCode,
                     "Status should be 500");
+
+        }
+
+        /// <summary>
+        /// TODO: Add description for test TestGet401
+        /// </summary>
+        [Test]
+        public async Task TestGet401() 
+        {
+
+            // Perform API call
+            dynamic result = null;
+
+            try
+            {
+                result = await controller.Get401Async();
+            }
+            catch(LocalTestException) {};
+
+            // Test response code
+            Assert.AreEqual(401, httpCallBackHandler.Response.StatusCode,
+                    "Status should be 401");
 
         }
 

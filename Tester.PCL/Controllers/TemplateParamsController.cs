@@ -1,7 +1,7 @@
 /*
  * Tester.PCL
  *
- * This file was automatically generated for Stamplay by APIMATIC v2.0 ( https://apimatic.io ) on 08/01/2016
+ * This file was automatically generated for Stamplay by APIMATIC v2.0 ( https://apimatic.io ) on 09/08/2016
  */
 using System;
 using System.Collections.Generic;
@@ -15,6 +15,7 @@ using Tester.PCL;
 using Tester.PCL.Http.Request;
 using Tester.PCL.Http.Response;
 using Tester.PCL.Http.Client;
+using Tester.PCL.Exceptions;
 using Tester.PCL.Models;
 
 namespace Tester.PCL.Controllers
